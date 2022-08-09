@@ -35,4 +35,5 @@ gen
 
 # 自定义
 **/target
+.DS_store
 
