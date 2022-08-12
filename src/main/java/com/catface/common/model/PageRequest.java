@@ -12,10 +12,10 @@ import lombok.Data;
 @ApiModel(description = "分页请求模型")
 public class PageRequest {
 
-    @ApiModelProperty(value = "当前页码,从1开始")
+    @ApiModelProperty(value = "当前页码,从1开始", required = true, example = "1")
     private long current = 1;
 
-    @ApiModelProperty(value = "分页大小")
+    @ApiModelProperty(value = "分页大小", required = true, example = "10")
     private long size = 10;
 
     public PageRequest() {
