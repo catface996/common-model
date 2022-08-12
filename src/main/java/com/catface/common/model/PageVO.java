@@ -1,10 +1,10 @@
 package com.catface.common.model;
 
-import java.util.List;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * @author by catface
@@ -32,7 +32,7 @@ public class PageVO<T> {
     @ApiModelProperty(value = "总条数")
     private Integer total;
 
-    public PageVO(){
+    public PageVO() {
 
     }
 
@@ -43,6 +43,14 @@ public class PageVO<T> {
         this.pages = pages;
         this.hasNext = current < pages;
         this.total = total;
+    }
+
+    public PageVO(long current, long size, long pages, long total) {
+        this.current = (int) current;
+        this.size = (int) size;
+        this.pages = (int) pages;
+        this.hasNext = current < pages;
+        this.total = (int) total;
     }
 
 }
