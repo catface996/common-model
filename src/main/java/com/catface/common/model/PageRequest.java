@@ -13,16 +13,16 @@ import lombok.Data;
 public class PageRequest {
 
     @ApiModelProperty(value = "当前页码,从1开始")
-    private Integer current = 1;
+    private long current = 1;
 
     @ApiModelProperty(value = "分页大小")
-    private Integer size = 10;
+    private long size = 10;
 
     public PageRequest() {
 
     }
 
-    public PageRequest(Integer current, Integer size) {
+    public PageRequest(long current, long size) {
         this.current = current;
         this.size = size;
     }

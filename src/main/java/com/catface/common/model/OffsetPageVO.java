@@ -1,10 +1,10 @@
 package com.catface.common.model;
 
-import java.util.List;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * @author by catface
@@ -25,7 +25,7 @@ public class OffsetPageVO<O, T> {
     private O maxOffset;
 
     @ApiModelProperty(value = "分页大小")
-    private Integer size;
+    private Long size;
 
     @ApiModelProperty(value = "是否有下一页,true:有;false:无")
     private Boolean hasNext;
@@ -34,7 +34,7 @@ public class OffsetPageVO<O, T> {
 
     }
 
-    public OffsetPageVO(List<T> records, O minOffset, O maxOffset, Integer size, boolean hasNext) {
+    public OffsetPageVO(List<T> records, O minOffset, O maxOffset, long size, boolean hasNext) {
         this.records = records;
         this.minOffset = minOffset;
         this.maxOffset = maxOffset;

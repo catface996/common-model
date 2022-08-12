@@ -18,25 +18,25 @@ public class PageVO<T> {
     private List<T> records;
 
     @ApiModelProperty(value = "当前页码")
-    private Integer current;
+    private Long current;
 
     @ApiModelProperty(value = "分页大小")
-    private Integer size;
+    private Long size;
 
     @ApiModelProperty(value = "总页数")
-    private Integer pages;
+    private Long pages;
 
     @ApiModelProperty(value = "是否有下一页,true:有;false:无")
     private Boolean hasNext;
 
     @ApiModelProperty(value = "总条数")
-    private Integer total;
+    private Long total;
 
     public PageVO() {
 
     }
 
-    public PageVO(List<T> records, Integer current, Integer size, Integer pages, Integer total) {
+    public PageVO(List<T> records, long current, long size, long pages, long total) {
         this.records = records;
         this.current = current;
         this.size = size;
@@ -46,11 +46,11 @@ public class PageVO<T> {
     }
 
     public PageVO(long current, long size, long pages, long total) {
-        this.current = (int) current;
-        this.size = (int) size;
-        this.pages = (int) pages;
+        this.current = current;
+        this.size = size;
+        this.pages = pages;
         this.hasNext = current < pages;
-        this.total = (int) total;
+        this.total = total;
     }
 
 }

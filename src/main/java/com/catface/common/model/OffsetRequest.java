@@ -1,12 +1,12 @@
 package com.catface.common.model;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
 import com.catface.common.enums.common.QueryDirectionEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author by catface
@@ -26,13 +26,13 @@ public class OffsetRequest<O> {
 
     @ApiModelProperty(value = "分页大小", example = "10")
     @Min(value = 1, message = "分页大小需大于0")
-    private Integer size = 10;
+    private long size = 10;
 
     public OffsetRequest() {
 
     }
 
-    public OffsetRequest(O offset, Integer size, QueryDirectionEnum direction) {
+    public OffsetRequest(O offset, long size, QueryDirectionEnum direction) {
         this.offset = offset;
         this.size = size;
         this.direction = direction;
