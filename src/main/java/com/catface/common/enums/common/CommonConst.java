@@ -6,8 +6,6 @@ package com.catface.common.enums.common;
  */
 public class CommonConst {
 
-    public static final String HM_TOKEN = "token";
-
     public static final String ACCOUNT_ID = "accountId";
 
     public static final String USER_ID = "userId";
