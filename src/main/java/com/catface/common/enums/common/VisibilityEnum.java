@@ -10,7 +10,7 @@ import com.catface.common.enums.BaseEnum;
 public enum VisibilityEnum implements BaseEnum {
 
     PRIVATE("PRIVATE", "私有"),
-    PUBLIC("PUBLIC", "私有"),
+    PUBLIC("PUBLIC", "公开"),
     SYSTEM("SYSTEM", "系统")
     ;
 
