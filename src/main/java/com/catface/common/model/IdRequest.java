@@ -1,5 +1,6 @@
 package com.catface.common.model;
 
+import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 
 import io.swagger.annotations.ApiModel;
@@ -12,7 +13,9 @@ import lombok.Data;
  */
 @Data
 @ApiModel(description = "id请求模型")
-public class IdRequest {
+public class IdRequest implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "业务ID")
     @NotNull(message = "ID不能为空")

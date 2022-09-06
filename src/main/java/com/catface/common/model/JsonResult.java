@@ -2,6 +2,7 @@ package com.catface.common.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import lombok.Data;
 
 /**
@@ -10,7 +11,9 @@ import lombok.Data;
  */
 @Data
 @ApiModel(description = "http通用返回模型")
-public class JsonResult<T> {
+public class JsonResult<T> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     public static final String SUCCESS_CODE = "200";
     public static final String ERROR_CODE = "500";

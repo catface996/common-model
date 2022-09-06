@@ -3,6 +3,7 @@ package com.catface.common.model;
 import com.catface.common.enums.common.QueryDirectionEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import lombok.Data;
 
 import javax.validation.constraints.Min;
@@ -14,7 +15,9 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 @ApiModel(description = "分页请求模型")
-public class OffsetRequest<O> {
+public class OffsetRequest<O> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "当前页码,从1开始", example = "1212121212121")
     @NotNull(message = "偏移量不能为空")

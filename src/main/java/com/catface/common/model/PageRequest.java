@@ -2,6 +2,7 @@ package com.catface.common.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import lombok.Data;
 
 /**
@@ -10,7 +11,9 @@ import lombok.Data;
  */
 @Data
 @ApiModel(description = "分页请求模型")
-public class PageRequest {
+public class PageRequest implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "当前页码,从1开始", required = true, example = "1")
     private long current = 1;

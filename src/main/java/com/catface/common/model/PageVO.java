@@ -2,6 +2,7 @@ package com.catface.common.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import lombok.Data;
 
 import java.util.List;
@@ -12,7 +13,9 @@ import java.util.List;
  */
 @Data
 @ApiModel(description = "分页通用返回模型")
-public class PageVO<T> {
+public class PageVO<T> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "结果列表")
     private List<T> records;
